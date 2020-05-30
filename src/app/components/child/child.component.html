@@ -1,0 +1,33 @@
+<div class="row">
+    <div class="col-md-12" style="text-align: center;">
+        <a routerLink="/" href="#">Back to Home</a>
+    </div>
+</div>
+<div class="row" *ngIf="userData">
+    <div class="col-md-9 offset-3">
+        <strong> Id - #{{userData.id}}</strong>
+    </div>
+    <div class="col-md-9 offset-3">
+        <strong> Name - </strong> {{userData.name}}
+    </div>
+    <div class="col-md-9 offset-3">
+        <strong> User Name - </strong> {{userData.username}}
+    </div>
+    <div class="col-md-9 offset-3">
+        <strong> Email Id - </strong> {{userData.email}}
+    </div>
+    <div class="col-md-9 offset-3">
+        <strong> Address - </strong> {{userData.address.street}}, {{userData.address.suite}}, {{userData.address.city}}
+        -{{userData.address.zipcode}}
+    </div>
+    <div class="col-md-9 offset-3">
+        <strong> Phone - </strong> {{userData.phone}}
+    </div>
+    <div class="col-md-9 offset-3">
+        <strong> Email website - </strong> {{userData.website}}
+    </div>
+    <div class="col-md-9 offset-3">
+        <strong> Company Details - </strong> {{userData.company.name}}, {{userData.company.catchPhrase}},
+        {{userData.company.bs}}
+    </div>
+</div>

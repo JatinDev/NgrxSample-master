@@ -1,0 +1,52 @@
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th>
+                <strong> Id</strong>
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                User Name
+            </th>
+            <th>
+                Email ID
+            </th>
+            <th>
+                Address
+            </th>
+            <th>
+                Phone
+            </th>
+            <th>
+                Website
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let obj of (allUser$ | async)" (click)="GoToDetails(obj.id)" style="cursor: pointer;">
+            <td>
+                <strong>#{{obj.id}}</strong>
+            </td>
+            <td>
+                {{obj.name}}
+            </td>
+            <td>
+                {{obj.username}}
+            </td>
+            <td>
+                {{obj.email}}
+            </td>
+            <td>
+                {{obj.address.street}}, {{obj.address.suite}}, {{obj.address.city}}- {{obj.address.zipcode}}
+            </td>
+            <td>
+                {{obj.phone}}
+            </td>
+            <td>
+                {{obj.website}}
+            </td>
+        </tr>
+    </tbody>
+</table>
